@@ -56,7 +56,6 @@ if __name__ == "__main__":
     os.environ.setdefault("HCCL_CONNECT_TIMEOUT", "1800")
     os.environ.setdefault("ASCEND_GLOBAL_LOG_LEVEL", "3")
     os.environ.setdefault("ASCEND_LAUNCH_BLOCKING", "1")
-
     os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
     main()
