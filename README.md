@@ -1,6 +1,6 @@
 # YOLOv12-on-Ascend
 
-## Overview
+## 📌 Overview
 
 This repository provides a **PyTorch-based** implementation and training setup for YOLO series models on **Huawei Ascend NPUs** using the **torch_npu** extension. By leveraging the compute power of Ascend AI Processors, developers can train object detection models such as YOLOv12 efficiently within the Ascend ecosystem.
 
@@ -19,10 +19,4 @@ To support training on Ascend NPUs, the following files from the original Ultral
 | `utils` | Added support for `npu` device detection and conversion utilities | ✅ Replaced |
 
 
-> 📌 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/ultralytics/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
-
----
-
-## 🔄 Integration Guide
-
-To integrate the Ascend-compatible components into your existing Ultralytics environment:
+> 🔄 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/ultralytics/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
