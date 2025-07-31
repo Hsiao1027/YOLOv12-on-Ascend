@@ -19,4 +19,4 @@ To support training on Ascend NPUs, the following files from the original Ultral
 | `utils/` | Added NPU device detection, precision handling, and utility functions in relevant utility scripts | ✅ Partly Replaced |
 
 
-> 🔄 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/ultralytics/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
+> 🔄 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/sunsmarterjie/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
