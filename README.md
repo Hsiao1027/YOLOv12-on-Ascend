@@ -13,11 +13,11 @@ To support training on Ascend NPUs, the following files from the original Ultral
 | File | Description | Status |
 |------|-------------|--------|
 | `train.py` | Modified to support `torch_npu`, including device selection, AMP, and HCCL | ✅ Replaced |
-| `val.py` | Adjusted for NPU inference and evaluation on Ascend | ✅ Replaced |
-| `ultralytics/engine/trainer.py` | Inserted NPU-specific logic and synchronization handling | ✅ Replaced |
-| `ultralytics/nn/modules/block.py` | Resolved compatibility with custom fused layers on Ascend | ⚠️ Slight Modification |
-| `ultralytics/yolo/utils/torch_utils.py` | Added support for `npu` device detection and conversion utilities | ✅ Replaced |
-| `ultralytics/yolo/utils/__init__.py` | Registered device-specific hooks for NPU | ⚠️ Added few lines |
+| `train_ddp.py` | Modified to support distributed training on Ascend NPUs using HCCL and `torch.distributed` | ✅ Replaced |
+| `engine` | Inserted NPU-specific logic and synchronization handling | ✅ Replaced |
+| `nn` | Resolved compatibility with custom fused layers on Ascend | ✅ Replaced |
+| `utils` | Added support for `npu` device detection and conversion utilities | ✅ Replaced |
+
 
 > 📌 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/ultralytics/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
 
@@ -26,7 +26,3 @@ To support training on Ascend NPUs, the following files from the original Ultral
 ## 🔄 Integration Guide
 
 To integrate the Ascend-compatible components into your existing Ultralytics environment:
-
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/yourname/YOLOv12-on-Ascend.git
