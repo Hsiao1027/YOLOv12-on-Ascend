@@ -18,5 +18,35 @@ To support training on Ascend NPUs, the following files from the original Ultral
 | `nn/` | Updated specific modules to ensure compatibility with fused layers and torch_npu execution | ✅ Partly Replaced |
 | `utils/` | Added NPU device detection, precision handling, and utility functions in relevant utility scripts | ✅ Partly Replaced |
 
+## ⚙️ Installation
+
+```bash
+# (optional) conda create -n yolov12-ascend python=3.10 -y && conda activate yolov12-ascend
+pip install -r requirements.txt
+source /usr/local/Ascend/ascend-toolkit/set_env.sh
+```
+
+## 🚀 Training (Quick Start)
+
+### Single-NPU
+```bash
+python train.py 
+```
+
+### Multi-NPU (DDP with HCCL)
+```bash
+torchrun --nproc_per_node=8 train_ddp.py
+```
+
+
+##  Acknowledgments
+- Ultralytics YOLO
+- Huawei Ascend / torch_npu teams
+
+---
+
+## License
+Follow the upstream Ultralytics license and add-on notices for modified files.
+
 
 > 🔄 All modified files are included in this repository. If you're using the official [Ultralytics YOLOv12](https://github.com/sunsmarterjie/yolov12) repo, you can **replace the corresponding files** with those provided here to enable Ascend NPU support.
